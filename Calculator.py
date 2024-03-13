@@ -4,29 +4,28 @@ import tkinter as tk
 calculation = ""
 
 def add_to_calculation(symbol):
-    pass
-    # global  calculation
-    # calculation+=str(symbol)
-    # text_result.delete(1.0,"end")
-    # text_result.insert(1.0,calculation)
+    global  calculation
+    calculation+=str(symbol)
+    print(calculation)
+    text_result.delete(1.0,"end")
+    text_result.insert(1.0,calculation)
 
 def evaluate_calculation():
-    pass
-    # global calculation
-    # try:
-    #     calculation = str(eval(calculation))
-    #     text_result.delete(1.0, "end")
-    #     text_result.insert(1.0, calculation)
-    #
-    # except:
-    #     clear_filed()
-    #     text_result.insert(1.0,"error")
+    global calculation
+    try:
+        calculation = str(eval(calculation))
+        print(calculation)
+        text_result.delete(1.0, "end")
+        text_result.insert(1.0, calculation)
+
+    except:
+        clear_filed()
+        text_result.insert(1.0,"error")
 
 def clear_filed():
-    pass
-    # global calculation
-    # calculation = ""
-    # text_result.delete(1.0, "end")
+    global calculation
+    calculation = ""
+    text_result.delete(1.0, "end")
 
 
 root = tk.Tk()
