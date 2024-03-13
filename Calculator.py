@@ -6,7 +6,6 @@ calculation = ""
 def add_to_calculation(symbol):
     global  calculation
     calculation+=str(symbol)
-    print(calculation)
     text_result.delete(1.0,"end")
     text_result.insert(1.0,calculation)
 
@@ -68,7 +67,7 @@ btn_brac2 = tk.Button(root,text=")",command=lambda :add_to_calculation(")"), wid
 btn_brac2.grid(row=5,column=3)
 btn_equal = tk.Button(root,text="=",command=evaluate_calculation, width=11, font=("Arial",14))
 btn_equal.grid(row=6,column=3,columnspan=2)
-btn_clear = tk.Button(root,text="C",command=clear_filed(), width=11, font=("Arial",14))
+btn_clear = tk.Button(root,text="C",command=clear_filed, width=11, font=("Arial",14))
 btn_clear.grid(row=6,column=1,columnspan=2)
 
 
